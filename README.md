@@ -1,7 +1,7 @@
 # Lebanon Outdoor Sports AI 🇱🇧  
 Live: https://ai.lebanon-outdoor-sports.workers.dev/
 
-An AI chatbot that helps users discover outdoor activities, trails, clubs, and adventures across Lebanon — powered by **Cloudflare Workers**, **Workers AI (Llama 3.3)**, **KV memory**, and a **Next.js UI** deployed through **Cloudflare Pages + OpenNext**.
+An AI chatbot that helps users discover outdoor activities, trails, clubs, and adventures across Lebanon — powered by **Cloudflare Workers**, **Workers AI (Llama 3.3)**, **KV memory**, and a **Next.js UI** deployed through **Cloudflare Pages**.
 
 ---
 
@@ -23,24 +23,6 @@ src/
 wrangler.jsonc            → Worker + KV config
 cloudflare-env.d.ts       → Type bindings
 open-next.config.ts       → OpenNext build config
-```
-
----
-
-## 🛠️ Local Development
-
-```
-npm install
-npm run dev   # UI
-```
-
----
-
-## 🌐 Deploy
-Already deployed. To redeploy:
-
-```
-npm run deploy
 ```
 
 ---

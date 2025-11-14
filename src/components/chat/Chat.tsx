@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { ChatMessage } from "@/app/api/chat/route";
 
 export default function Chat() {
@@ -111,7 +112,7 @@ export default function Chat() {
                   : "bg-white border border-gray-300 text-gray-800"
               }`}
             >
-              {m.content}
+              <ReactMarkdown>{m.content}</ReactMarkdown>
             </div>
           </div>
         ))}
