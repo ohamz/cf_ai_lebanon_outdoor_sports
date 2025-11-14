@@ -43,3 +43,18 @@ next-env.d.ts
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# Cloudflare worker build
+/worker.js
+/.worker-build
+
+# Dev databases
+*.sqlite
+*.sqlite-journal
+
+# IDE junk
+.idea/
+*.swp
+*.swo
+.vscode/*
+!.vscode/extensions.json
