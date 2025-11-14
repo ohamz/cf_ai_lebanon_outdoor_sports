@@ -113,12 +113,11 @@ export default function Chat() {
                   : "bg-white border border-gray-300 text-gray-800"
               }`}
             >
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                className="prose prose-sm leading-relaxed"
-              >
-                {m.content}
-              </ReactMarkdown>
+              <div className="prose prose-sm leading-relaxed">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {m.content}
+                </ReactMarkdown>
+              </div>
             </div>
           </div>
         ))}
