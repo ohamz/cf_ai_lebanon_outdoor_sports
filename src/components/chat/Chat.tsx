@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { ChatMessage } from "@/app/api/chat/route";
 
 export default function Chat() {
@@ -106,13 +107,18 @@ export default function Chat() {
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
             <div
-              className={`max-w-[75%] px-3 py-2 rounded-lg text-sm whitespace-pre-wrap animate-msgFade ${
+              className={`max-w-[75%] px-3 py-2 rounded-lg text-sm animate-msgFade ${
                 m.role === "user"
                   ? "bg-[#d11f1f] text-white"
                   : "bg-white border border-gray-300 text-gray-800"
               }`}
             >
-              <ReactMarkdown>{m.content}</ReactMarkdown>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                className="prose prose-sm leading-relaxed"
+              >
+                {m.content}
+              </ReactMarkdown>
             </div>
           </div>
         ))}
